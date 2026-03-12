@@ -1,0 +1,3 @@
+// El offset del header fijo lo gestiona la clase global
+// `.main-content` definida en styles.scss mediante var(--header-height).
+// Este archivo queda disponible para estilos propios del layout público.
