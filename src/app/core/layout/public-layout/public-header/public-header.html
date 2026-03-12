@@ -1,1 +1,92 @@
-<p>public-header works!</p>
+<header class="header" [class.scrolled]="isScrolled">
+  <nav class="navbar">
+    <!-- Menú izquierdo (desktop) -->
+    <ul class="nav-menu nav-left">
+      <li class="nav-item">
+        <a routerLink="/nosotros" routerLinkActive="active" class="nav-link" (click)="closeMenu()"
+          >Nosotros</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/elecciones" routerLinkActive="active" class="nav-link" (click)="closeMenu()"
+          >Elecciones</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/campeonatos"
+          routerLinkActive="active"
+          class="nav-link"
+          (click)="closeMenu()"
+          >Campeonatos</a
+        >
+      </li>
+    </ul>
+
+    <!-- Logo central -->
+    <div class="logo">
+      <a routerLink="/">
+        <img src="assets/public-web/exal.png" alt="ASECLAR Logo" class="logo-img" />
+      </a>
+    </div>
+
+    <!-- Menú derecho (desktop) -->
+    <ul class="nav-menu nav-right">
+      <li class="nav-item">
+        <a routerLink="/proyectos" routerLinkActive="active" class="nav-link" (click)="closeMenu()"
+          >Proyectos</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/comunidad" routerLinkActive="active" class="nav-link" (click)="closeMenu()"
+          >Comunidad</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/estatutos" routerLinkActive="active" class="nav-link" (click)="closeMenu()"
+          >Estatutos</a
+        >
+      </li>
+    </ul>
+
+    <!-- Botón hamburguesa (mobile) -->
+    <button
+      class="hamburger"
+      [class.active]="isMenuOpen"
+      (click)="toggleMenu()"
+      aria-label="Abrir menú"
+      [attr.aria-expanded]="isMenuOpen"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Menú Mobile (overlay) -->
+<div class="mobile-menu" [class.active]="isMenuOpen" (click)="closeMenu()">
+  <ul class="mobile-nav" (click)="$event.stopPropagation()">
+    <li class="mobile-nav-item">
+      <a routerLink="/" class="mobile-nav-link" (click)="closeMenu()">Inicio</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a routerLink="/nosotros" class="mobile-nav-link" (click)="closeMenu()">Nosotros</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a routerLink="/elecciones" class="mobile-nav-link" (click)="closeMenu()">Elecciones</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a routerLink="/campeonatos" class="mobile-nav-link" (click)="closeMenu()">Campeonatos</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a routerLink="/proyectos" class="mobile-nav-link" (click)="closeMenu()">Proyectos</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a routerLink="/comunidad" class="mobile-nav-link" (click)="closeMenu()">Comunidad</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a routerLink="/estatutos" class="mobile-nav-link" (click)="closeMenu()">Estatutos</a>
+    </li>
+  </ul>
+</div>
