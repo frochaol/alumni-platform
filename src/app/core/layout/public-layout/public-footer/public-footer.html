@@ -1,1 +1,100 @@
-<p>public-footer works!</p>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo y descripción -->
+    <div class="footer-brand-center">
+      <div class="footer-logo">
+        <a routerLink="/">
+          <img src="assets/public-web/exal.png" alt="ASECLAR Logo" class="footer-logo-img" />
+        </a>
+      </div>
+      <p class="footer-description">
+        Asociación de Exalumnos Claretianos comprometida con los valores de San Antonio María Claret
+        y el fortalecimiento de nuestra comunidad global.
+      </p>
+    </div>
+
+    <!-- Sección superior: nav columns + redes -->
+    <div class="footer-top">
+      <!-- Columnas de navegación -->
+      <div class="footer-nav">
+        <div class="footer-nav-column">
+          <h4 class="footer-nav-title">Navegación</h4>
+          <ul class="footer-nav-list">
+            <li><a routerLink="/" class="footer-nav-link">Inicio</a></li>
+            <li><span class="footer-nav-link footer-nav-link--disabled">Eventos</span></li>
+            <li><span class="footer-nav-link footer-nav-link--disabled">Noticias</span></li>
+            <li><span class="footer-nav-link footer-nav-link--disabled">Comunidad</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-column">
+          <h4 class="footer-nav-title">Participación</h4>
+          <ul class="footer-nav-list">
+            <li><span class="footer-nav-link footer-nav-link--disabled">Proyectos</span></li>
+            <li><span class="footer-nav-link footer-nav-link--disabled">Campeonatos</span></li>
+            <li><a routerLink="/elecciones" class="footer-nav-link">Elecciones</a></li>
+            <li><span class="footer-nav-link footer-nav-link--disabled">Estatutos</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-column">
+          <h4 class="footer-nav-title">Contacto</h4>
+          <ul class="footer-nav-list">
+            <li><a routerLink="/nosotros" class="footer-nav-link">Nosotros</a></li>
+            <li>
+              <span class="footer-nav-link footer-nav-link--disabled">Email: En proceso</span>
+            </li>
+            <li>
+              <span class="footer-nav-link footer-nav-link--disabled">Teléfono: En proceso</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="footer-social">
+        <h4 class="footer-social-title">Síguenos</h4>
+        <div class="footer-social-links">
+          <a
+            href="https://www.facebook.com/aseclar.aqp"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-link"
+            aria-label="Síguenos en Facebook"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divisor -->
+    <div class="footer-divider"></div>
+
+    <!-- Sección inferior -->
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        &copy; {{ currentYear }} ASECLAR. Todos los derechos reservados.
+      </p>
+      <div class="footer-bottom-links">
+        <span class="footer-bottom-link footer-bottom-link--disabled">Política de Privacidad</span>
+        <span class="footer-bottom-link footer-bottom-link--disabled">Términos de Uso</span>
+      </div>
+    </div>
+
+    <!-- Crédito del desarrollador -->
+    <div class="footer-developer">
+      <div class="developer-content">
+        <p class="developer-text">
+          Sitio desarrollado por
+          <a href="mailto:contacto@frochaol.com" class="developer-link"> contacto@frochaol.com </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

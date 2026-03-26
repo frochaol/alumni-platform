@@ -54,6 +54,7 @@
 /* 4. Base */
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -63,6 +64,15 @@ body {
   background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+}
+
+// En Angular, app-root es un custom element (inline por defecto).
+// Debe ser flex para que los layouts hijos puedan crecer con flex: 1.
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 img {
